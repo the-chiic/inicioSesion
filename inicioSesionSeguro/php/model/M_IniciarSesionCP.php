@@ -7,7 +7,8 @@
         function __construct(){
             parent::__construct();
         }
-
+        //Recogo los datos mandados por parámetros y compruebo que los datos esten bien mandados, primero preparando la consulta y con el bind_param()
+        //asignando bien los datos por cada interrogación va en el bind_param(tipo de dato, variable), luego recogemos el resultado
         public function compararDatos($correo, $pw){
             $sql="SELECT nick FROM usuarios WHERE correo=? AND pw=?;";
 
@@ -29,5 +30,6 @@
             }
         }
     }
+
 
 ?>
